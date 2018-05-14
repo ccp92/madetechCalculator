@@ -27,5 +27,17 @@ describe Calculator do
 
       expect(calculator.factorial(5)).to eq(120)
     end
+
+    it "returns a message when given -1 (non positive integers are not valid)" do
+      calculator = Calculator.new
+
+      expect(calculator.factorial(-1)).to eq("Invalid argument passed")
+    end
+
+    it "returns a message when given a 2.5 (non positive integers are not valid)" do
+      calculator = Calculator.new
+
+      expect(calculator.factorial(2.5)). to eq("Invalid argument passed")
+    end
   end
 end

@@ -6,8 +6,10 @@ class Calculator
   def factorial(n)
     if n == 0
       1
-    else
+    elsif n.integer? && n > 0
       (1..n).reduce(:*)
+    else
+      "Invalid argument passed"
     end
   end
 end
