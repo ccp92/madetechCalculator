@@ -4,12 +4,11 @@ class Calculator
   end
 
   def factorial(n)
+    raise ArgumentError unless n.integer? && n >= 0
     if n == 0
       1
-    elsif n.integer? && n > 0
-      (1..n).reduce(:*)
     else
-      "Invalid argument passed"
+      (1..n).reduce(:*)
     end
   end
 end

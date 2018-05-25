@@ -22,11 +22,11 @@ describe Calculator do
     end
 
     it "returns a message when given -1 (non positive integers are not valid)" do
-      expect(calculator.factorial(-1)).to eq("Invalid argument passed")
+      expect{ calculator.factorial(-1) }.to raise_error ArgumentError
     end
 
     it "returns a message when given a 2.5 (non positive integers are not valid)" do
-      expect(calculator.factorial(2.5)). to eq("Invalid argument passed")
+      expect{ calculator.factorial(2.5) }. to raise_error ArgumentError
     end
   end
 end
